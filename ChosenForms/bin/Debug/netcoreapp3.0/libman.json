@@ -10,6 +10,21 @@
         "chosen.css",
         "chosen.jquery.js"
       ]
+    },
+    {
+      "library": "font-awesome@5.10.2",
+      "destination": "wwwroot/lib/font-awesome/",
+      "files": [
+        "css/all.css"
+      ]
+    },
+    {
+      "library": "font-awesome@5.10.2",
+      "destination": "wwwroot/lib/font-awesome/",
+      "files": [
+        "css/all.css",
+        "js/all.js"
+      ]
     }
   ]
 }
