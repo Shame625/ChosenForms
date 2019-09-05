@@ -1,0 +1,29 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Images";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    int i = 0;
+    int nextClosure = 0;
+}
+
+<div class="container">
+    @foreach(var v in Model)
+    {
+    @if(i % 4 == 0)
+    {
+        nextClosure = i + 3;
+    @: <div class="row">
+    }
+        <div class="col-md-3 ">
+            <a href="@v"><img src="@v" class="img-thumbnail"/></a>
+        </div>
+        @if(i == nextClosure)
+    {
+    @: </div>
+    }
+    i++;
+    }
+</div>

@@ -33,9 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li id="homeLink" class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" asp-controller="Home" asp-action="Home">Privacy</a></li>
-                        <li class="nav-item"><a class="nav-link active" asp-controller="Home" asp-action="Home">Team</a></li>
-                        <li class="nav-item"><a class="nav-link active" asp-controller="Home" asp-action="Home">Connect</a></li>
+                        <li id="feedbackLink" class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Feedback">Feedback</a></li>
+                        <li id ="imagesLink" class="nav-item"><a  class="nav-link" asp-controller="Home" asp-action="Images">Images</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Home">Connect</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,6 +69,12 @@
         {
             case "Index":
                 $("#homeLink").addClass("active");
+                break;
+            case "Feedback":
+                $("#feedbackLink").addClass("active");
+                break;
+            case "Images":
+                $("#imagesLink").addClass("active");
                 break;
         }
         break;

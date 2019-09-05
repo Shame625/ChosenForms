@@ -1,0 +1,27 @@
+﻿@model Feedback
+@{
+    ViewData["Title"] = "Feedback";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Feedback" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="@Model.Comment">Example textarea</label>
+        <textarea asp-for="@Model.Comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <div class="custom-file">
+            <input id="customFile" type="file" class="file-input" asp-for="@Model.File" accept="image/*">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+    </div>
+
+    <button>Submit</button>
+</form>
+
+<script>
+    $(".file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
